@@ -1,0 +1,28 @@
+.user-table-container {
+    overflow-x: auto;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.user-table th,
+.user-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+.user-table th {
+    background-color: #f4f4f4;
+}
+
+@media (max-width: 768px) {
+    .user-table th, .user-table td {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
