@@ -1,8 +1,8 @@
-import { gql } from '@apollo/client';
+// import { gql } from '@apollo/client';
 
-export const LOGIN_MUTATION = gql`
-mutation Login($input: UsersPermissionsLoginInput!){
-    login(input: $input) {
+export const LOGIN_MUTATION = `
+mutation Login($input: UsersPermissionsLoginInput!) {
+    login(input: $input) { 
         jwt
         user {
             id
@@ -11,16 +11,17 @@ mutation Login($input: UsersPermissionsLoginInput!){
         }
     }
 }
+
 `;
-export const SIGNUP_MUTATION = gql`
+export const SIGNUP_MUTATION = `
 mutation Register($input: UsersPermissionsRegisterInput!) {
     register(input: $input){
-        user {
+        jwt
+        user  {
             id
             username
             email
         }
-        jwt
     }
 }
 `;
